@@ -24,7 +24,7 @@ int clear(t_env *env, int code)
 	if(env->f)
 		fclose(env->f);
 	if(env->area)
-		fclose(env->area);
+		free(env->area);
 	*env = (t_env){0};
 	return code;
 }
